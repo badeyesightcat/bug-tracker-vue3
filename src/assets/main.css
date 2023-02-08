@@ -1,35 +1,66 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --white: #fff;
+  --fontColor: #2e3f2f;
 
-  font-weight: normal;
+  --warm500: #eed7c5;
+  --warm700: #fcc7b5;
+
+  --neutral100: #e7e2e5;
+  --neutral300: #ddd9dd;
+  --neutral500: #bbb6a5;
+  --neutral700: #b6acb0;
+
+  --primaryLight: rgb(142, 159, 212);
+  --primaryMain: #4eaed2;
+  --primaryDark: #427b9e;
+  --primaryStrong: #0b1621;
+
+  --secondaryMain: #f1e270;
+  --secondaryDark: #cfa06c;
+
+  /* --neutral700: #d9d0d0;
+  --primaryColor: #314e53;
+  --oldCopper: #7e5233;
+  --secondaryColor: #b98753;
+  --pointColor: #af8246;
+  --englishWalnut: #442e26;
+  --mischka: #dadade;
+  --shark: #2a2f33;
+  --mantle: #8c9491;
+  --manatee: #8c8c9c; */
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.0625rem;
+  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.brandname {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: var(--secondaryMain);
+  font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+input:focus {
+  outline: solid 3px var(--secondaryMain);
+  border-radius: 0.125rem;
+  box-shadow: 0 0.5rem 1.5rem var(--fontColor);
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.page-container {
+  padding: 65px 0 0 20%;
+  height: 100vh;
+}
+
+.theme-light {
+  background-color: var(--neutral100);
 }
